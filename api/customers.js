@@ -34,6 +34,7 @@ const editCustomer = (customer) => {
     customers.map(item => {
         if (item.id == customer.id) {
             item = customer
+            return item
         }
     })
     return customer;
