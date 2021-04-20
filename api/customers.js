@@ -31,12 +31,8 @@ const addCustomer = (customer) => {
 }
 
 const editCustomer = (customer) => {
-    customers.map(item => {
-        if (item.id == customer.id) {
-            item = customer
-            return item
-        }
-    })
+    var foundIndex = customers.findIndex(item => item.id == customer.id);
+    customers[foundIndex] = customer;
     return customer;
 }
 
