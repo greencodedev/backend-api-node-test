@@ -39,8 +39,8 @@ const editCustomer = (customer) => {
     return customer;
 }
 
-const deleteCustomer = (customerID) => {
-    const filtered = customers.filter(item => item.id != customerID);
+const removeCustomer = (customer) => {
+    const filtered = customers.filter(item => item.id != customer.id);
     customers = filtered;
     return filtered;
 }
@@ -49,5 +49,5 @@ module.exports = {
     getCustomersList,
     addCustomer,
     editCustomer,
-    deleteCustomer
+    removeCustomer
 }

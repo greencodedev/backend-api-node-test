@@ -1,4 +1,4 @@
-const { getCustomersList, addCustomer, editCustomer, deleteCustomer } = require('../api/customers');
+const { getCustomersList, addCustomer, editCustomer, removeCustomer } = require('../api/customers');
 const { getFinancialList } = require('../api/finance');
 
 const appRouter = (app) => {    
@@ -19,7 +19,7 @@ const appRouter = (app) => {
 
     app.delete('/api/customer', (req, res) => {
         console.log("req => ", req.body);
-        res.end(JSON.stringify(deleteCustomer(req.body.customer)));
+        res.end(JSON.stringify(removeCustomer(req.body.customer)));
     });
 
     app.get('/api/finance', (req, res) => {
